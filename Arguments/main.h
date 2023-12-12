@@ -7,5 +7,6 @@
 #include <limits.h>
 
 int read_line(void);
+char **command_line_to_av(void);
 
 #endif
