@@ -22,7 +22,8 @@ int main(void)
     int status;
 
     printf("The wait function returns %d because no child process.\n",wait(&status));
-
+    // -1
+    
     child_pid = fork();
     if (child_pid == -1)
     {
