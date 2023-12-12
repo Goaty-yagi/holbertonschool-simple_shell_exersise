@@ -6,8 +6,8 @@
 #include <stdbool.h>
 #include <limits.h>
 
-void print_av(char **av);
-int read_line(void);
 char **command_line_to_av(void);
+void print_av(char **av)
+int read_line(void);
 
 #endif
