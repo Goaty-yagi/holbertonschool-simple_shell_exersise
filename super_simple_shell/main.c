@@ -16,14 +16,14 @@ int main(void)
     char **argv;
     char command[MAX_COMMAND_LENGTH];
     pid_t child_pid;
-    pid_t my_pid;
-    pid_t my_ppid;
+    // pid_t my_pid;
+    // pid_t my_ppid;
     int status, counter;
 
     counter = 0;
     argv = malloc(2 * sizeof(char *));
-    my_ppid = getppid();
-    printf("(%d) PPID\n", my_ppid);
+    // my_ppid = getppid();
+    // printf("(%d) PPID\n", my_ppid);
     if (argv == NULL)
     {
         perror("Memory allocation error");
@@ -32,7 +32,6 @@ int main(void)
 
     while (1)
     {
-        fork();
         child_pid = fork();
         if (child_pid == -1)
         {
@@ -40,12 +39,12 @@ int main(void)
             free(argv);
             return (1);
         }
-        my_pid = getpid();
-        my_ppid = getppid();
+        // my_pid = getpid();
+        // my_ppid = getppid();
         if (child_pid == 0)
         {
-            printf("My pid is %u\n", my_pid);
-            printf("My ppid is %u\n", my_ppid);
+            // printf("My pid is %u\n", my_pid);
+            // printf("My ppid is %u\n", my_ppid);
             printf("cisfun$ ");
             if (fgets(command, MAX_COMMAND_LENGTH, stdin) != NULL)
             {
@@ -59,6 +58,7 @@ int main(void)
                 // Execute the command
                 if (execvp(argv[0], argv) == -1)
                 {
+                    // wait(&status);
                     perror("Error");
                     return (1);
                 }
@@ -70,6 +70,7 @@ int main(void)
         }
         else
         {
+            // printf("Not child_pid == 0");
             wait(&status);
         }
         counter = counter + 1;

@@ -9,8 +9,7 @@
 
 void print_av(char **av)
 {
-
-    while(*av)
+    while(++*av)
     {
         printf("%s\n", *av);
         av++;
