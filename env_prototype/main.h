@@ -11,4 +11,7 @@
 #include <errno.h>
 #include <dirent.h>
 
+void printenv_with_environ(void);
+void env_vs_environ(char **env);
+
 #endif

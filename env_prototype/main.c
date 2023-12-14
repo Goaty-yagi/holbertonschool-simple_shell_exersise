@@ -1,16 +1,11 @@
 #include "main.h"
 
-int main(int ac, char **av)
+int main(int ac, char **av, char **env)
 {
-    char **ap;
-
     (void)ac;
-    (void)ap;
     (void)av;
-    // file_info_ex(ac, av);
-    file_info_exercise(ac, av);
-    // opendir_readdir();
-    // printf("%s", ap[8]);
-    // ap = get_dir(".");
+    (void)env;
+    // printenv_with_environ();
+    env_vs_environ(env);
     return (0);
 }
