@@ -33,5 +33,6 @@ char *_getenv(const char *name);
 list_t *add_node_end(list_t **head, const char *str);
 list_t *path_linked_list(void);
 int _setenv(const char *name, const char *value, int overwrite);
+int _unsetenv(const char *name);
 
 #endif

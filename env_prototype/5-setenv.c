@@ -10,7 +10,7 @@
  * by sprintf, then set it to original environ to update, or append it to a new_environ variable copied all pointer of
  * current env, and reassign it to the original environ.
  *
- * Return: int
+ * Return: 0 success while -1 error.
  */
 
 // strncmp compare two strings until number of char
