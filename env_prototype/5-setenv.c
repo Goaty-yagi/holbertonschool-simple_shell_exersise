@@ -6,7 +6,7 @@
  * @value: value
  * @overwrite: 1 means override while 0 doesn't.
  *
- * description: the same as setenv function. the idea is that make key-value paire as a string from the arguments
+ * description: the same as setenv function. the idea is that make key-value pair as a string from the arguments
  * by sprintf, then set it to original environ to update, or append it to a new_environ variable copied all pointer of
  * current env, and reassign it to the original environ.
  *
