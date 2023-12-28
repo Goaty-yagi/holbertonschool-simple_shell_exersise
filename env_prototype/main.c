@@ -22,25 +22,25 @@ int main(int ac, char **av, char **env)
     // printf("%s\n", en);
 
     // ** 3-print-dirs-path **
-    // print_dirs_path();
+    print_dirs_path();
 
     // ** 4-path_linked_list **
     // head = path_linked_list();
     // print_list(head);
 
     // // ** 5-_setenv **
-    _setenv("MY_VARIABLE", "value1", 1); // Add or modify MY_VARIABLE
-    _setenv("ANOTHER_VARIABLE", "value2", 0); // Add ANOTHER_VARIABLE if not exists
-    _setenv("MY_VARIABLE", "super_new_value", 1); // Don't overwrite MY_VARIABLE
-    // Print the modified environment
-    for (i = 0; environ[i] != NULL; i++) {
-        printf("%s\n", environ[i]);
-    }
+    // _setenv("MY_VARIABLE", "value1", 1); // Add or modify MY_VARIABLE
+    // _setenv("ANOTHER_VARIABLE", "value2", 0); // Add ANOTHER_VARIABLE if not exists
+    // _setenv("MY_VARIABLE", "super_new_value", 1); // Don't overwrite MY_VARIABLE
+    // // Print the modified environment
+    // for (i = 0; environ[i] != NULL; i++) {
+    //     printf("%s\n", environ[i]);
+    // }
 
-     // ** 6-_unsetenv **
-    _unsetenv("ANOTHER_VARIABLE");
-    for (i = 0; environ[i] != NULL; i++) {
-        printf("%s\n", environ[i]);
-    }
+    //  // ** 6-_unsetenv **
+    // _unsetenv("ANOTHER_VARIABLE");
+    // for (i = 0; environ[i] != NULL; i++) {
+    //     printf("%s\n", environ[i]);
+    // }
     return (0);
 }

@@ -4,7 +4,7 @@
 
 void *print_dirs_path(void)
 {
-    char *delimiter = "/";
+    char *delimiter = ":";
     char *token;
     const char *key = "PATH";
     char *PATH;

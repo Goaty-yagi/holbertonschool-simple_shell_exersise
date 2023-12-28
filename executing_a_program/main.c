@@ -1,21 +1,20 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <stdlib.h>
+#include <dirent.h>
 
-/**
- * main - execve example
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *argv[] = {"/bin/ls", "-la", "../arguments", NULL};
+int main(void) {
+    struct dirent *entry;
+    DIR *directory = opendir("."); // Open the current directory
 
-    printf("Before execve\n");
-    if (execve(argv[0], argv, NULL) == -1)
-    // in this case, execve call the ls command with -la flags in ../arguments dir.
-    {
-        perror("Error:");
+    if (directory == NULL) {
+        perror("opendir");
+        return 1;
     }
-    printf("After execve\n"); // this system will be overwritten.
-    return (0);
+
+    while ((entry = readdir(directory)) != NULL) {
+        printf("%s\n", entry->d_name);
+    }
+
+    closedir(directory);
+    return 0;
 }

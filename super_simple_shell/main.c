@@ -59,7 +59,7 @@ int main(void)
                 if (execvp(argv[0], argv) == -1)
                 {
                     // wait(&status);
-                    perror("Error");
+                    perror("Error_DESU");
                     return (1);
                 }
             }

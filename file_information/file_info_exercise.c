@@ -15,7 +15,8 @@ int file_info_exercise(int ac, char **av)
     }
     counter = 1;
     ap_counter = found = 0;
-    ap = get_dir(".");
+    ap = get_dir("/bin");
+    printf("TEST:%s\n", ap[5]);
     while (counter < ac)
     {
         while (ap[ap_counter])

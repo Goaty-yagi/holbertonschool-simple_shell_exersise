@@ -6,7 +6,7 @@ int main(int ac, char **av, char **env)
     (void)av;
     (void)env;
 
-    // diff();
+    /* diff(); */
     diff_order();
 
     return 0;
